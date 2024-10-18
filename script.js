@@ -36,8 +36,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             window.location.href = 'admin.html';
         } else if (userRole === 'docente') {
             window.location.href = 'docente.html';
-        } else if (userRole === 'estudiante') {
-            window.location.href = 'estudiante.html';
         } else {
             alert('Credenciales incorrectas');
         }
@@ -52,8 +50,7 @@ function authenticateUser(username, password) {
         // Simulación de autenticación
         const users = [
             { username: 'admin', password: 'admin123', role: 'admin' },
-            { username: 'docente', password: 'docente123', role: 'docente' },
-            { username: 'estudiante', password: 'estudiante123', role: 'estudiante' }
+            { username: 'docente', password: 'docente123', role: 'docente' }
         ];
 
         const user = users.find(u => u.username === username && u.password === password);
@@ -76,7 +73,7 @@ function navigate(option) {
                     <input type="text" id="id_carrera" placeholder="ID Carrera" readonly><br>
                     <input type="text" id="establecimiento" placeholder="Establecimiento" required><br>
                     <input type="text" id="nomcarrera" placeholder="Nombre Carrera" required><br>
-                    <button type="submit">Agregar Carrera</button>
+                    <button type="submit">save</button>
                 </form>
                 <h4>Lista de Carreras</h4>
                 <div id="carreraList"></div>
